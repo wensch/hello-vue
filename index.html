@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Hello VueJs</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="app" id="app">
+  <h1 v-html="title"></h1>
+  <h2 v-html="message"></h2>
+
+  <div class="fields">
+    <input type="text" id="input" v-on:keypress.enter='addItem'>
+    <button v-on:click='addItem' class="addItem">Adicionar</button>
+  </div>
+  <ul class="list">
+    <li v-for='(item, index) in items'>
+      {{item.fruta}}
+      <button v-on:click='deleteItem(index)' class="deleteItem">X</button>
+    </li>
+  </ul>
+</div>
+  <script src='https://unpkg.com/vue'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
